@@ -132,10 +132,12 @@ OSSL_METHOD_STORE *ossl_method_store_new(OPENSSL_CTX *ctx)
 {
     OSSL_METHOD_STORE *res;
 
+    /*
     if (!openssl_ctx_run_once(ctx,
                               OPENSSL_CTX_METHOD_STORE_RUN_ONCE_INDEX,
                               do_method_store_init))
         return NULL;
+    */
 
     res = OPENSSL_zalloc(sizeof(*res));
     if (res != NULL) {
